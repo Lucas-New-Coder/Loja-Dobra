@@ -164,7 +164,7 @@ li{
   background-color: #6f3db0;
   max-width: 1200px;
   margin: 0 auto;
-  height: 300px;
+  min-height: 300px;
 }
 
 .subProductIMG{
@@ -190,7 +190,19 @@ li{
   text-align: center;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 600px){
+  .subProduct{
+    flex-direction: column;
+  }
+
+
+
+
+}
 /* subSection termina */
+
+/* última parte aqui */
 .lastSection{
   display: flex;
   flex-direction: column;
@@ -217,10 +229,27 @@ li{
 }
 
 .mainText img{
-width: 600px;
+max-width: 400px;
 padding-bottom: 100px;
 }
 
+@media only screen and (max-width: 600px){
+
+  .mainText p{
+    max-width: 400px;
+    align-self: center;
+  }
+  .mainText img{
+    max-width: 400px;
+  }
+  .lastSection h1{
+    align-self: center;
+    text-align: center;
+  }
+
+}
+
+/* última parte termina aqui */
 .footer {
   z-index: 1;
   display: flex;
@@ -349,7 +378,7 @@ transition: color 500ms,background-color 600ms ;
 
 /* principais produtos termina aqui */
 
-/* tamanos dos protudos aqui */
+/* tamanos dos produtos aqui */
 .sizeDropdown {
   display: flex;
   visibility: hidden;
@@ -424,15 +453,18 @@ transition: color 500ms,background-color 600ms ;
   min-height: 800px;
   flex-wrap: wrap;
  
+ 
 }
 .info h1{
   padding-top: 80px;
   z-index: 1;
   color: rgb(255, 255, 255);
+  flex-wrap: wrap;
 }
 .infoIMG img{
   background-color: rgb(255, 255, 255);
   max-width: 500px;
+  object-fit: cover;
 
 }
 .infoContent{
@@ -450,14 +482,6 @@ transition: color 500ms,background-color 600ms ;
   }
  
 }
-@media only screen and (max-width: 1136px){
-  .infoTxt{
-    color: #00b3d1;}
-}
-.infoContent>*{
-  margin: 30px;
-  margin-top: 90px;
-}
 
 .infoTxt{
  
@@ -466,6 +490,7 @@ transition: color 500ms,background-color 600ms ;
   font-weight: 600;
   color: white;
   font-size: 15pt;
+  flex-wrap: wrap;
 
 }
 
@@ -475,7 +500,7 @@ transition: color 500ms,background-color 600ms ;
 }
 .infoTxt h1{
   margin-top: 30px;
-  width: 200px;
+  max-width: 200px;
   font-size: 20pt;
   cursor: pointer;
   transition: color 300ms;
@@ -494,4 +519,20 @@ transition: color 500ms,background-color 600ms ;
 .info{
   top: -93px;
 }
+
+@media only screen and (max-width: 600px){
+  .infoContent{
+    justify-content: center;
+   
+  }
+  .infoTxt{
+    max-width: 250px;
+  }
+  .infoIMG img{
+    max-width: 300px;
+  
+  }
+
+}
+
 /*fim do compre e personalize*/
