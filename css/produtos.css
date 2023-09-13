@@ -98,75 +98,27 @@
   }
   /* headher termina aqui aqui */
 
-  /*hero aqui */
-.galleryContainer{
-    position: relative;
-    margin: 0 auto;
-    
-  }
-  
-  .galleryWrapper{
-    overflow-x: auto;
-    overflow: hidden; /* Hide scrollbars */
-    
-  }
-  
-  .gallery{
-    display: flex;
-    flex-flow: row nowrap ;
-  }
-  .arrowRight,
-  .arrowLeft{
-    position: absolute;
-    left: auto;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    font-size: 40px;
-    font-weight: bolder;
-    cursor: pointer;
-    color:#00000041;
-    border: none;
-    background: #ffffff00;
-    padding: 20px;
-    transition: color 300ms, transform 300ms;
-    z-index: 1;
-  }
-  
-  .arrowLeft:hover,.arrowRight:hover{
-    color: rgb(0, 0, 0);
-  }
-  
-  
-  .arrowLeft{
-    left: 0;
-    right: auto;
-  } 
-  
-  .item{
-    width: 100vw;
-    cursor: pointer;
-  }
 
-  .sep{
-    width: 100%;
-    height: 10px;
-    background-color: #6f3db0;}
-  /* hero termina aqui */
 
   /* a parte principal aqui */
 
 .todosProdutosContainer{
     display: flex;
-    padding-left: 100px;
+    justify-content: space-around;
     padding-top: 30px;
 }
 
-
+@media only screen and (max-width: 600px){
+  .todosProdutosContainer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .filtros{
     display: flex;
     flex-direction: column;
-    height: 500px;
+    min-height: 500px;
     width: 250px;
     background-color: rgb(225, 225, 225);
     padding-left: 20px;
