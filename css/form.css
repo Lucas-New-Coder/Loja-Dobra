@@ -66,10 +66,31 @@ input::-webkit-inner-spin-button{
     -webkit-appearance:none ;
     margin: 0;
 }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+input[type="number"] {
+   -moz-appearance: textfield;
+   appearance: textfield;
+}
+
+
 
 input:focus{
     border: 2px solid rgb(128, 0, 207);
 }
+
+input:focus{
+    border: 2px solid rgb(128, 0, 207);
+}
+input:focus:not(:placeholder-shown) {
+    color: black;
+    font-weight: bold;
+}
+
 input:focus::placeholder{
     color: black;
     font-weight: bold;
