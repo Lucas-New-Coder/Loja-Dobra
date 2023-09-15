@@ -1,3 +1,41 @@
+//config carouselHero 
+const controls= document.querySelectorAll('.control')
+let currentItem = 0
+const items = document.querySelectorAll('.item')
+const maxItens = items.length
+
+controls.forEach(control =>{
+  control.addEventListener('click',()=>{
+    const isLeft = 
+    control.classList.contains('arrowLeft')
+      if (isLeft){
+        currentItem -=1
+
+      }else { 
+        currentItem += 1
+      }
+
+      if (currentItem >= maxItens){
+        currentItem = 0
+      }
+      if (currentItem < 0){
+        currentItem=maxItens -1
+      }
+      items.forEach(item=>
+        item.classList.remove('currentItem')
+        )
+        items[currentItem].scrollIntoView ({
+          inline:'center',
+          behavior:'smooth',
+          block: 'nearest'
+        
+        })
+        items[currentItem].classList.add('currentItem')
+  })
+})
+
+
+
 let principaisProd = document.getElementById('principais-produtos-container') 
 console.log(principaisProd)
 
@@ -67,11 +105,7 @@ let gerarPrudotos = () => {
     
     let tamanhosHTML = x.tamanhos.map(tamanho => {
       return `
-        <div class="size">
-          <button class="sizeBtn">+</button>
-          <a href="#">${tamanho}<P class="quantidade"></P></a>
-          <button class="sizeBtn">-</button>
-        </div>
+      
       `;
     }).join("");
 

@@ -97,7 +97,62 @@
     transition: transform 300ms;
   }
   /* headher termina aqui aqui */
+/*hero aqui */
+.galleryContainer{
+  position: relative;
+  margin: 0 auto;
+  
+}
 
+.galleryWrapper{
+  overflow-x: auto;
+  overflow: hidden; /* Hide scrollbars */
+  
+}
+
+.gallery{
+  display: flex;
+  flex-flow: row nowrap ;
+}
+.arrowRight,
+.arrowLeft{
+  position: absolute;
+  left: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 40px;
+  font-weight: bolder;
+  cursor: pointer;
+  color:#00000041;
+  border: none;
+  background: #ffffff00;
+  padding: 20px;
+  transition: color 300ms, transform 300ms;
+  z-index: 1;
+}
+
+.arrowLeft:hover,.arrowRight:hover{
+  color: rgb(0, 0, 0);
+}
+
+
+.arrowLeft{
+  left: 0;
+  right: auto;
+} 
+
+.item{
+  width: 100vw;
+  cursor: pointer;
+}
+/* hero termina aqui */
+.sep{
+  width: 100%;
+  height: 10px;
+  background-color: #6f3db0;
+
+}
 
 
   /* a parte principal aqui */
@@ -106,6 +161,7 @@
     display: flex;
     justify-content: space-around;
     padding-top: 30px;
+    
 }
 
 @media only screen and (max-width: 600px){
@@ -120,7 +176,7 @@
     flex-direction: column;
     min-height: 500px;
     width: 250px;
-    background-color: rgb(225, 225, 225);
+    background-color: rgba(0, 0, 0, 0.097);
     padding-left: 20px;
     
 }
@@ -142,6 +198,7 @@
     font-weight: 500;
 }
 .main{
+
     margin: 0 auto;
 }
 
@@ -156,6 +213,7 @@
 
 /* principais produtos aqui */
 .principais-produtos{
+  border-radius: 10px;
     display: flex;
     background-color: #00b3d1;
     flex-direction: column;
@@ -234,68 +292,7 @@
   
   /* principais produtos termina aqui */
 
-  /* tamanos dos protudos aqui */
-.sizeDropdown {
-    display: flex;
-    visibility: hidden;
-    position: absolute;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    flex-direction: row;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 300ms;
-    
-  }
-  
-  .sizeDropdown a {
-    padding: 6.5px;
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    color: #6f3db0;
-    font-weight: 900;
-    transition: all 200ms;
-    font-size: 10pt;
-  }
-  
-  .sizeDropdown a:hover {
-    background-color: #6f3db0;
-    color: white;
-  }
-  
-  .produto:hover .sizeDropdown {
-    visibility: visible;
-    opacity: 0.9;
-  }
-  .size{
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-  
-  }
-  .sizeBtn{
-    background: #ffffff00;
-    border: none;
-    color: #00b3d1;
-    font-size: 15pt;
-    font-weight: bolder;
-    cursor: pointer;
-    transition: background-color 300ms;
-  
-  }
-  .sizeBtn:hover{
-    background-color: #6f3db0;
-    border-radius: 200px;
-    padding: 0px 6px;
-  }
-  /* tamanos dos protudos termina aqui */
+ 
   .footer {
     z-index: 1;
     display: flex;
@@ -310,3 +307,101 @@
     position: sticky;   
     top: 0; 
   }
+
+  /* subSection aqui */
+
+.subProduct{
+  top:  30px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #6f3db0;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 300px;
+}
+
+.subProductIMG{
+  width: 250px;
+  height: 250px;
+  background-color: rgb(240, 53, 53);
+}
+
+.subProductTxt{
+  width: 350px;
+  color: white;
+}
+.subProductIMGimg{
+ 
+  max-width: 250px;
+}
+.subProductTxt h1{
+  padding-bottom: 15px;
+}
+.subProductTxt h3{
+  font-size: 15pt;
+  padding-top: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+  .subProduct{
+    flex-direction: column;
+  }
+
+
+
+
+}
+/* subSection termina */
+
+  /* última parte aqui */
+.lastSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.lastSection h1{
+  color: #00b3d1;
+  font-size: 30pt;
+
+}
+
+.lastSection p{
+  padding-top: 15px;
+  font-size: 20pt;
+  max-width: 710px;
+  padding-bottom: 40px;
+}
+.mainText{
+  display: flex;
+  flex-direction: column;
+}
+
+.mainText img{
+max-width: 400px;
+padding-bottom: 100px;
+}
+
+@media only screen and (max-width: 600px){
+
+  .mainText p{
+    max-width: 400px;
+    align-self: center;
+  }
+  .mainText img{
+    max-width: 300px;
+  }
+  .lastSection h1{
+    align-self: center;
+    text-align: center;
+  }
+
+}
+
+/* última parte termina aqui */
